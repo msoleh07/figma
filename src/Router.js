@@ -5,7 +5,7 @@ import Activity from "./components/activity/Activity";
 import Popular from "./components/popular/Popular";
 import BestTraveler from "./components/bestTraveler/BestTraveler";
 import Review from "./components/review/Review";
-
+import Form from "./components/form/Form";
 function Router() {
   return (
     <div>
@@ -15,6 +15,7 @@ function Router() {
       <Popular />
       <BestTraveler />
       <Review />
+      <Form />
     </div>
   );
 }
