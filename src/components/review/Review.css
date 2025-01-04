@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+
+.review_container {
+  width: 100%;
+  padding-top: 20px !important;
+  padding-bottom: 50px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.review_container img {
+  width: 220px;
+}
+
+.review_container h1 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 45px;
+}
+
+.review_container span {
+  width: 690px;
+  text-align: center;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  line-height: 22px;
+  word-spacing: 5px;
+}
+
+.review_info_massage_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  gap: 30px;
+}
+
+.review_info_massage_text {
+  width: 850px;
+  height: 120px;
+  text-align: center;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.review_info_massage_text .comma_img {
+  position: absolute;
+  left: 25px;
+  width: 50px;
+  top: -25px;
+}
+
+.review_info_massage_text .title {
+  width: 800px;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  line-height: 22px;
+  word-spacing: 5px;
+  color: #fff;
+}
+
+.review_info_massage_text::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  bottom: -10px; /* Pastki chetga yaqin joylashish */
+  right: 300px; /* Markazdan joylash */
+  transform: translateX(-50%) rotate(45deg); /* Markazlash va 45° burish */
+  background: #ec583e;
+}
+
+.review_info_img {
+  width: 75%;
+  padding: 0 7%;
+}
+
+.review_info_img img {
+  width: 100%;
+}
