@@ -6,6 +6,7 @@ import { Link } from "react-router";
 import { CiLocationOn, CiSearch } from "react-icons/ci";
 import { MdOutlineDateRange } from "react-icons/md";
 import { motion } from "framer-motion";
+import { HiBars3 } from "react-icons/hi2";
 
 function HeroSection() {
   return (
@@ -53,14 +54,23 @@ function HeroSection() {
             </Link>
           </div>
           <div className="header_button">
-            <Link to={"/"}>
+            <Link to={"/"} className="signInLink">
               <b>Sign in</b>
             </Link>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              className="signUpBtn"
             >
               SignUp
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bars"
+            >
+              <HiBars3 />
             </motion.button>
           </div>
         </motion.header>
@@ -90,6 +100,7 @@ function HeroSection() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.9 }}
+            className="hero_dsc"
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

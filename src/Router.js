@@ -11,13 +11,13 @@ function Router() {
   return (
     <div>
       <HeroSection />
-      <Destination />
-      <Activity />
-      <Popular />
-      <BestTraveler />
-      <Review />
-      <Form />
-      <Footer />
+      {/* <Destination /> */}
+      {/* <Activity /> */}
+      {/* <Popular /> */}
+      {/* <BestTraveler /> */}
+      {/* <Review /> */}
+      {/* <Form /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -72,7 +72,7 @@ header a {
   gap: 25px;
 }
 
-.header_button a,
+.header_button .signInLink,
 .header_button a b {
   color: #c3babad1;
   color: rgba(222, 63, 5, 0.387);
@@ -80,14 +80,15 @@ header a {
   text-decoration: underline;
   transition: all 0.4s ease;
 }
-.header_button a:hover,
-.header_button a b:hover {
+
+.header_button .signInLink b:hover {
   color: rgb(222, 63, 5);
   text-decoration: none;
   transform: scale(1.1) rotate(3deg);
 }
 
-.header_button button {
+.header_button .signUpBtn,
+.header_button .bars {
   padding: 14px 19px;
   border-radius: 17px;
   border: none;
@@ -100,16 +101,22 @@ header a {
   box-shadow: 0 4px 15px rgba(222, 63, 5, 0.5);
 }
 
-.header_button button:hover {
+.header_button .signUpBtn:hover,
+.header_button .bars:hover {
   transform: scale(1.1) rotate(3deg);
   box-shadow: 0 8px 20px rgba(222, 63, 5, 0.7);
   color: #fff;
 }
 
-.header_button button:active {
+.header_button .signUpBtn:active,
+.header_button .bars:active {
   transform: scale(1);
   background: linear-gradient(45deg, rgb(222, 63, 5) 50%, rgb(229, 150, 5) 50%);
   box-shadow: 0 4px 10px rgba(222, 63, 5, 0.3);
+}
+
+.header_button .bars {
+  display: none;
 }
 
 .hero_section_about {
@@ -212,4 +219,135 @@ header a {
   transform: scale(1);
   background: linear-gradient(45deg, rgb(222, 63, 5) 50%, rgb(229, 150, 5) 50%);
   box-shadow: 0 4px 10px rgba(222, 63, 5, 0.3);
+}
+
+/* media */
+
+@media (max-width: 1020px) {
+  .header_links {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .header_links {
+    gap: 25px;
+  }
+
+  .header_button {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 906px) {
+  .header_links,
+  .header_button {
+    gap: 15px;
+  }
+
+  .header_links a,
+  .header_button a,
+  .header_button a b {
+    font-size: 13px;
+  }
+  .header_button .signUpBtn,
+  .header_button .bars {
+    padding: 13px 15px;
+  }
+}
+
+@media (max-width: 805px) {
+  .header_button .bars {
+    display: block;
+  }
+
+  .header_button .bars svg {
+    font-size: 15px;
+  }
+
+  .header_links {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .hero_section_about h1 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero_section_about h1 {
+    font-size: 55px;
+  }
+
+  .hero_section_about_location {
+    width: 370px;
+  }
+
+  .hero_section_about_location button {
+    padding: 13px 15px;
+  }
+
+  .hero_section_about span.hero_dsc {
+    width: 350px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero_section_about h1 {
+    font-size: 40px;
+  }
+
+  .hero_section_about .heading {
+    font-size: 30px;
+  }
+
+  .header_button .signInLink,
+  .header_button .signUpBtn {
+    display: none;
+  }
+
+  .hero_section_about_location {
+    height: 70px;
+    margin-top: 20px;
+  }
+
+  .header_button .bars,
+  .hero_section_about_location button {
+    padding: 8px 12px;
+  }
+
+  .hero_section_about_location button svg,
+  .location svg,
+  .date svg {
+    font-size: 15px;
+  }
+
+  .location,
+  .date {
+    gap: 8px;
+  }
+
+  .location .location_text,
+  .date .date_text {
+    gap: 3px;
+  }
+
+  .location .location_text span,
+  .date .date_text span {
+    font-size: 12px;
+  }
+
+  .location .location_text b,
+  .date .date_text b {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 395px) {
+  .hero_section_about span.hero_dsc,
+  .hero_section_about_location {
+    width: 300px;
+  }
 }
