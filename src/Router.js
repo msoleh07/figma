@@ -13,7 +13,7 @@ function Router() {
       <HeroSection />
       <Destination />
       <Activity />
-      {/* <Popular /> */}
+      <Popular />
       {/* <BestTraveler /> */}
       {/* <Review /> */}
       {/* <Form /> */}
