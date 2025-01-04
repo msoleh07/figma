@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroSection.css";
-// import Rectangle from "../../imgs/Rectangle.png";
-// import Logo from "../../imgs/logo.png";
+import Rectangle from "../../imgs/Rectangle.png";
+import Logo from "../../imgs/logo.png";
 import { Link } from "react-router";
 import { CiLocationOn, CiSearch } from "react-icons/ci";
 import { MdOutlineDateRange } from "react-icons/md";
@@ -12,7 +12,7 @@ function HeroSection() {
       <div
         id="container"
         style={{
-          // backgroundImage: `url(${Rectangle})`,
+          backgroundImage: `url(${Rectangle})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -23,7 +23,7 @@ function HeroSection() {
       >
         <header>
           <Link to={"/"}>
-            {/* <img className="logo_img" src={Logo} alt="Logo img" /> */}
+            <img className="logo_img" src={Logo} alt="Logo img" />
           </Link>
 
           <div className="header_links">
