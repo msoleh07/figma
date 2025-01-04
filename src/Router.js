@@ -12,7 +12,7 @@ function Router() {
     <div>
       <HeroSection />
       <Destination />
-      {/* <Activity /> */}
+      <Activity />
       {/* <Popular /> */}
       {/* <BestTraveler /> */}
       {/* <Review /> */}

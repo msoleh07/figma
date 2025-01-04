@@ -91,3 +91,56 @@
 .activity_card_0 span {
   color: #fff;
 }
+
+/* media */
+
+@media (max-width: 870px) {
+  .activity_card_img {
+    height: 130px;
+  }
+  .activity_card b {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+
+  .activity_card span {
+    width: auto;
+  }
+}
+
+@media (max-width: 820px) {
+  .activity_card_img img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 735px) {
+  .activity_container span {
+    width: auto;
+  }
+
+  .activity_card_container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 580px) {
+  .activity_container h1 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 450px) {
+  .activity_container img {
+    width: 135px;
+  }
+  .activity_container h1 {
+    font-size: 35px;
+  }
+
+  .activity_card_container {
+    grid-template-columns: repeat(1, auto);
+    gap: 10px;
+  }
+}
