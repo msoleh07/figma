@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+
+.best_traveler_container {
+  width: 100%;
+  padding-top: 20px !important;
+  padding-bottom: 50px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.best_traveler_container img {
+  width: 190px;
+}
+
+.best_traveler_container h1 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.best_traveler_container span {
+  width: 690px;
+  text-align: center;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  line-height: 22px;
+  word-spacing: 5px;
+}
+
+.best_traveler_card_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, 500px);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.best_traveler_card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.best_traveler_card img {
+  width: 100%;
+  height: 100%;
+}
