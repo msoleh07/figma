@@ -11,7 +11,7 @@ function Router() {
   return (
     <div>
       <HeroSection />
-      {/* <Destination /> */}
+      <Destination />
       {/* <Activity /> */}
       {/* <Popular /> */}
       {/* <BestTraveler /> */}

@@ -131,3 +131,113 @@
   box-shadow: 0 8px 20px rgba(222, 63, 5, 0.7);
   color: #fff;
 }
+
+/* media */
+
+@media (max-width: 920px) {
+  .destination_page_img_container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 750px) {
+  .destination_card img.destination_text_0 {
+    width: 180px;
+  }
+
+  .destination_card img.destination_text_1 {
+    width: 110px;
+  }
+
+  .destination_card img.destination_text_2 {
+    width: 80px;
+  }
+
+  .destination_card img.destination_text_3 {
+    width: 140px;
+  }
+
+  .destination_card .destination_button {
+    padding: 12px 15px;
+    border-radius: 13px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  .destination_page_container h1 {
+    font-size: 45px;
+  }
+
+  .destination_page_img_container {
+    height: 400px;
+  }
+
+  .destination_card img.destination_text_0 {
+    width: 130px;
+  }
+
+  .destination_card img.destination_text_1 {
+    width: 80px;
+  }
+
+  .destination_card img.destination_text_2 {
+    width: 70px;
+  }
+
+  .destination_card img.destination_text_3 {
+    width: 110px;
+  }
+
+  .destination_card .destination_button {
+    padding: 9px 12px;
+    border-radius: 13px;
+    font-size: 12px;
+  }
+
+  .destination_page_btn {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .destination_page_container h1 {
+    font-size: 35px;
+  }
+
+  .destination_page_img_container {
+    height: 300px;
+    gap: 10px;
+    margin: 20px;
+  }
+
+  .destination_card img.destination_text_0 {
+    width: 100px;
+  }
+
+  .destination_card img.destination_text_1 {
+    width: 50px;
+  }
+
+  .destination_card img.destination_text_2 {
+    width: 60px;
+  }
+
+  .destination_card img.destination_text_3 {
+    width: 90px;
+  }
+
+  .destination_card .destination_button {
+    padding: 8px 10px;
+    border-radius: 13px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 395px) {
+  .destination_page_btn {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}
