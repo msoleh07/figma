@@ -79,9 +79,9 @@
   content: "";
   width: 20px;
   height: 20px;
-  bottom: -10px; /* Pastki chetga yaqin joylashish */
-  right: 300px; /* Markazdan joylash */
-  transform: translateX(-50%) rotate(45deg); /* Markazlash va 45° burish */
+  bottom: -10px;
+  right: 300px;
+  transform: translateX(-50%) rotate(45deg);
   background: #ec583e;
 }
 
@@ -92,4 +92,65 @@
 
 .review_info_img img {
   width: 100%;
+}
+
+/* media */
+
+@media (max-width: 1000px) {
+  .review_info_massage_text {
+    width: auto;
+    height: auto;
+  }
+
+  .review_info_massage_text .title {
+    width: auto;
+  }
+}
+
+@media (max-width: 970px) {
+  .review_info_massage_text::after {
+    right: 350px;
+  }
+}
+
+@media (max-width: 960px) {
+  .review_info_massage_text::after {
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 930px) {
+  .review_container span {
+    width: auto;
+  }
+  .review_info_massage_container {
+    gap: 20px;
+  }
+  .review_info_massage_text::after {
+    display: none;
+  }
+
+  .review_info_img {
+    width: 90%;
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 730px) {
+  .review_container h1 {
+    font-size: 30px;
+  }
+  .review_info_massage_container {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 430px) {
+  .review_container h1 {
+    font-size: 25px;
+  }
+  .review_info_img {
+    width: 90%;
+    padding: 0 2%;
+  }
 }

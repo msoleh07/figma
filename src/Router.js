@@ -15,7 +15,7 @@ function Router() {
       <Activity />
       <Popular />
       <BestTraveler />
-      {/* <Review /> */}
+      <Review />
       {/* <Form /> */}
       {/* <Footer /> */}
     </div>
