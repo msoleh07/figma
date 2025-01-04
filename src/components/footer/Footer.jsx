@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Footer.css";
 import forest from "../../imgs/forest.jpg";
 import footer_title_img from "../../imgs/footer_title_img.png";
@@ -8,21 +8,28 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
-
-  const checkVisibility = () => {
-    const footerElement = document.getElementById("footer-section");
-    const rect = footerElement.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
+  const footerRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", checkVisibility);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
     return () => {
-      window.removeEventListener("scroll", checkVisibility);
+      if (footerRef.current) {
+        observer.disconnect();
+      }
     };
   }, []);
 
@@ -30,6 +37,7 @@ const Footer = () => {
     <motion.div
       className="footer"
       id="footer-section"
+      ref={footerRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1 }}
@@ -49,11 +57,11 @@ const Footer = () => {
           <motion.div
             className="footer_dsc"
             initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: isVisible ? 1 : 0 }}
+            animate={{ x: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
             <img src={footer_title_img} alt="" />
-            <span>
+            <span className="footer_dsc">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -94,7 +102,7 @@ const Footer = () => {
           <motion.div
             className="footer_about"
             initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: isVisible ? 1 : 0 }}
+            animate={{ y: isVisible ? 0 : 100, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
             <div className="footer_about_container">
