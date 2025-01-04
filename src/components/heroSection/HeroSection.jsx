@@ -1,3 +1,93 @@
+// import React from "react";
+// import "./HeroSection.css";
+// import Rectangle from "../../imgs/Rectangle.png";
+// import Logo from "../../imgs/logo.png";
+// import { Link } from "react-router";
+// import { CiLocationOn, CiSearch } from "react-icons/ci";
+// import { MdOutlineDateRange } from "react-icons/md";
+
+// function HeroSection() {
+//   return (
+//     <div className="hero_section">
+//       <div
+//         id="container"
+//         style={{
+//           backgroundImage: `url(${Rectangle})`,
+//           backgroundSize: "cover",
+//           backgroundPosition: "center",
+//           backgroundRepeat: "no-repeat",
+//           width: "100%",
+//           height: "100%",
+//         }}
+//         className="hero_section_container"
+//       >
+//         <header>
+//           <Link to={"/"}>
+//             <img className="logo_img" src={Logo} alt="Logo img" />
+//           </Link>
+
+//           <div className="header_links">
+//             <Link to={"/"}>Home</Link>
+//             <Link to={"/"}>About Us</Link>
+//             <Link style={{ color: "#0000006d" }} to={"/"}>
+//               Destinations
+//             </Link>
+//             <Link style={{ color: "#0000006d" }} to={"/"}>
+//               Tours
+//             </Link>
+//             <Link style={{ color: "#0000006d" }} to={"/"}>
+//               Shop
+//             </Link>
+//             <Link style={{ color: "#0000006d" }} to={"/"}>
+//               Blogs
+//             </Link>
+//           </div>
+//           <div className="header_button">
+//             <Link to={"/"}>
+//               <b>Sign in</b>
+//             </Link>
+//             <button>SignUp</button>
+//           </div>
+//         </header>
+
+//         <div className="hero_section_about">
+//           <span class="heading">Explorer and Travel</span>
+//           <h1>Let’s Go Now</h1>
+//           <span>
+//             Lorem Ipsum is simply dummy text of the printing and typesetting
+//             industry. Lorem Ipsum has been the industry's standard dummy text
+//             ever since the 1500s,
+//           </span>
+
+//           <div className="hero_section_about_location">
+//             <div className="location">
+//               <CiLocationOn />
+//               <div className="location_text">
+//                 <span>Location</span>
+//                 <b>Thailand</b>
+//               </div>
+//             </div>
+
+//             <div className="date">
+//               <MdOutlineDateRange />
+//               <div className="date_text">
+//                 <span>Date</span>
+//                 <b>13 May, 2023</b>
+//               </div>
+//             </div>
+
+//             <button>
+//               <CiSearch />
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default HeroSection;
+
 import React from "react";
 import "./HeroSection.css";
 import Rectangle from "../../imgs/Rectangle.png";
@@ -5,10 +95,16 @@ import Logo from "../../imgs/logo.png";
 import { Link } from "react-router";
 import { CiLocationOn, CiSearch } from "react-icons/ci";
 import { MdOutlineDateRange } from "react-icons/md";
+import { motion } from "framer-motion";
 
 function HeroSection() {
   return (
-    <div className="hero_section">
+    <motion.div
+      className="hero_section"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <div
         id="container"
         style={{
@@ -21,7 +117,11 @@ function HeroSection() {
         }}
         className="hero_section_container"
       >
-        <header>
+        <motion.header
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           <Link to={"/"}>
             <img className="logo_img" src={Logo} alt="Logo img" />
           </Link>
@@ -46,43 +146,87 @@ function HeroSection() {
             <Link to={"/"}>
               <b>Sign in</b>
             </Link>
-            <button>SignUp</button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              SignUp
+            </motion.button>
           </div>
-        </header>
+        </motion.header>
 
-        <div className="hero_section_about">
-          <span class="heading">Explorer and Travel</span>
-          <h1>Let’s Go Now</h1>
-          <span>
+        <motion.div
+          className="hero_section_about"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          <motion.span
+            className="heading"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            Explorer and Travel
+          </motion.span>
+          <motion.h1
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            Let’s Go Now
+          </motion.h1>
+          <motion.span
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s,
-          </span>
+          </motion.span>
 
-          <div className="hero_section_about_location">
-            <div className="location">
+          <motion.div
+            className="hero_section_about_location"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1.1 }}
+          >
+            <motion.div
+              className="location"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <CiLocationOn />
               <div className="location_text">
                 <span>Location</span>
                 <b>Thailand</b>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="date">
+            <motion.div
+              className="date"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <MdOutlineDateRange />
               <div className="date_text">
                 <span>Date</span>
                 <b>13 May, 2023</b>
               </div>
-            </div>
+            </motion.div>
 
-            <button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <CiSearch />
-            </button>
-          </div>
-        </div>
+            </motion.button>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

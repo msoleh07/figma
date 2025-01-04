@@ -6,6 +6,7 @@ import Popular from "./components/popular/Popular";
 import BestTraveler from "./components/bestTraveler/BestTraveler";
 import Review from "./components/review/Review";
 import Form from "./components/form/Form";
+import Footer from "./components/footer/Footer";
 function Router() {
   return (
     <div>
@@ -16,6 +17,7 @@ function Router() {
       <BestTraveler />
       <Review />
       <Form />
+      <Footer />
     </div>
   );
 }
