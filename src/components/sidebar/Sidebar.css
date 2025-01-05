@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+
+.sidebar_page {
+  width: 100%;
+  height: 100%;
+  background: #0000008e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(3px);
+  z-index: 10;
+}
+
+.sidebar_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 30px;
+  width: 300px;
+  /* background: #ffffffa1; */
+}
+
+.sidebar img {
+  width: 180px;
+}
+
+.sidebar_container button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  transition: all 0.4s ease;
+  background: linear-gradient(45deg, #e53935, #ff844f);
+  box-shadow: 0 4px 15px rgba(222, 63, 5, 0.5);
+}
+
+.sidebar_links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.sidebar_links li {
+  width: 100%;
+  border-bottom: 1px solid #ff844f;
+  color: #fff;
+  padding: 5px;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  cursor: pointer;
+}
+
+.sidebar_links li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+}
+
+.login_link_div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: none;
+}
+
+/* media */
+
+@media (max-width: 450px) {
+  .login_link_div {
+    display: flex;
+  }
+}

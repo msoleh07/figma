@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HeroSection.css";
 import Rectangle from "../../imgs/Rectangle.png";
 import Logo from "../../imgs/logo.png";
@@ -7,8 +7,20 @@ import { CiLocationOn, CiSearch } from "react-icons/ci";
 import { MdOutlineDateRange } from "react-icons/md";
 import { motion } from "framer-motion";
 import { HiBars3 } from "react-icons/hi2";
+import Sidebar from "../sidebar/Sidebar";
+import { MdClose } from "react-icons/md";
 
 function HeroSection() {
+  const [sidebarClick, setSidebarClick] = useState(false);
+
+  const clickBtn = () => {
+    setSidebarClick((prevState) => !prevState);
+  };
+
+  sidebarClick
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
+
   return (
     <motion.div
       className="hero_section"
@@ -69,11 +81,13 @@ function HeroSection() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="bars"
+              onClick={clickBtn}
             >
-              <HiBars3 />
+              {sidebarClick ? <MdClose /> : <HiBars3 />}
             </motion.button>
           </div>
         </motion.header>
+        {sidebarClick && <Sidebar setSidebarClick={setSidebarClick} />}
 
         <motion.div
           className="hero_section_about"
